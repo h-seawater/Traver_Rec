@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국 여행지 추천</title>
+    <link rel="stylesheet" href="tstyle.css"/>
+</head>
+<!-- 여행지 참조 사이트 https://www.tripadvisor.co.kr/Attractions-g294196-Activities-c42-a_trating.40-South_Korea.html-->
+
+<body>
+    <!-- 상단 네비게이션 바-->
+    <nav>
+        <div class="nav-logo">대한민국<br>여행지</div>
+        <div class="nav-tabs">
+            <div class="nav-item" id="drop-course">
+                <button class="nav-tab" onclick="toggleDropdown('drop-course')">
+                    <span class="nav-tab-title">여행지</span>
+                    <span class="nav-tab-sub">유명한 추천 여행지</span>
+                </button>
+                <div class="dropdown">
+                    <a class="dropdown-item" href="#">올레길</a>
+                    <a class="dropdown-item" href="#">경복궁</a>
+                    <a class="dropdown-item" href="#">기타 아무거산</a>
+                </div>
+            </div>
+
+            <div class="nav-item" id="drop-festival">
+                <button class="nav-tab" onclick="toggleDropdown('drop_festival')">
+                    <span class="nav-tab-title">축제</span>
+                    <span class="nav-tab-sub">현재 진행중인 축제</span>
+                </button>
+                <div class="dropdown">
+                    <a class="dropdown-item" href="#">자연-꽃 축제</a>
+                    <a class="dropdown-item" href="#">문화-전통 축제</a>
+                    <a class="dropdown-item" href="#">식도락 축제</a>
+                    <a class="dropdown-item" href="#">기타 아무거산</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <a class="nav-tab" href="#">
+                    <span class="nav-tab-title">지도</span>
+                    <span class="nav-tab-sub">전국 지도</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>
