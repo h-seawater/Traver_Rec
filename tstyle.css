@@ -1,6 +1,10 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 :root {
     --bgc: #ffffff;
     --border: #111111;
+    --hover_b: #eee9de;
+    --hovering: #c23333;
 }
 
 body {
@@ -9,7 +13,7 @@ body {
     min-height: 100vh;
 }
 
-/* ── NAV ── */
+/*nav*/
 nav {
     display: flex;
     background: var(--bgc);
@@ -21,7 +25,7 @@ nav {
 
 .nav-logo {
     font-weight: 700;
-    padding: 18 28;
+    padding: 18px 28px;
     border-bottom: 2px solid var(--border);
 }
 
@@ -52,17 +56,30 @@ nav {
     color: var(--border);
     border: none;
 }
-/*
+
 .nav-tab:hover{
-    
+    background: var(--hover_b);
 }
 
 .nav-tab:hover .nav-tab-title {
-    
+    color: var(--hovering);
 }
 
 .nav-tab:hover .nav-tab-sub {
-    
+    color: var(--hovering); opacity: 0.7;
 }
 
-*/
+
+
+.nav-tab-title {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+}
+ 
+.nav-tab-sub {
+    font-weight: 300;
+    color: var(--muted);
+    margin-top: 3px;
+    transition: color 0.2s;
+}
