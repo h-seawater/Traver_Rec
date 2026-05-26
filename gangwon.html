@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기도 여행지</title>
+    <link rel="stylesheet" href="tstyle.css"/>
+    <style>
+        .region-hero {
+            padding: 20px 40px 40px;
+            border-bottom: 1px solid #d6cfc4;
+        }
+
+        .region-back {
+            font-size: 0.8rem;
+            color: #8a7f74;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .region-back:hover { color: #c0392b; }
+
+        .region-name {
+            font-family: serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .region-desc {
+            font-size: 0.95rem;
+            color: #8a7f74;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .section { padding: 40px; }
+
+        .section-header {
+            font-family: serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding-bottom: 14px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid #d6cfc4;
+        }
+
+        /* 여행지 */
+        .spot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: #d6cfc4;
+            border: 1px solid #d6cfc4;
+        }
+
+        .spot-card {
+            background: #fff;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .spot-img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            align-items: center;
+            justify-content: center;
+            color: #d6cfc4;
+            font-size: 0.75rem;
+            border-radius: 2px;
+        }
+
+        .spot-name {
+            font-family: serif;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .spot-desc {
+            font-size: 0.82rem;
+            color: #8a7f74;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* 음식 */
+        .food-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border: 1px solid #d6cfc4;
+            background: #d6cfc4;
+        }
+
+        .food-item {
+            background: #fff;
+            padding: 22px 28px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .food-num {
+            font-family: serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #d6cfc4;
+            width: 36px;
+            flex-shrink: 0;
+        }
+
+        .food-name {
+            font-family: serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .food-desc {
+            font-size: 0.8rem;
+            color: #8a7f74;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <div class="region-hero">
+        <a class="region-back" href="tmap1.html">← 지도로 돌아가기</a>
+        <h1 class="region-name">강원도</h1>
+        <p class="region-desc">탁 트인 동해 바다와 태백산맥의 자연경관을 동시에 누리는 사계절 힐링 여행.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header">대표 여행지</div>
+        <div class="spot-grid">
+            <div class="spot-card">
+                <img src="강원랜드.jpg" alt="킨텍스" class="spot-img">
+                <div class="spot-name">강원랜드</div>
+                <div class="spot-desc">산업통상부 산하 시장형 공기업인 복합 리조트, 카지노.</div>
+            </div>
+            <div class="spot-card">
+                <img src="남이섬.jpg" alt="남이섬" class="spot-img">
+                <div class="spot-name">남이섬</div>
+                <div class="spot-desc">아름다운 자연과 문화예술이 어우러진 북한강의 대표적인 생태문화 휴양지.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">추천 음식</div>
+        <div class="food-list">
+            <div class="food-item">
+                <span class="food-num">01</span>
+                <div>
+                    <div class="food-name">춘천 닭갈비</div>
+                    <div class="food-desc">닭갈비의 시초이며, 닭갈비 거리가 형성될 정도로 춘천하면 떠오르는 음식</div>
+                </div>
+            </div>
+            <div class="food-item">
+                <span class="food-num">02</span>
+                <div>
+                    <div class="food-name">속초 오징어 순대</div>
+                    <div class="food-desc">오징어 몸통 속에 다리, 채소, 고기 등으로 속을 꽉 채워 쪄낸 순대.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tpage.js"></script>
+</body>
+</html>

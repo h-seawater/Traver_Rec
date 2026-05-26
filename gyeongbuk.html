@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기도 여행지</title>
+    <link rel="stylesheet" href="tstyle.css"/>
+    <style>
+        .region-hero {
+            padding: 20px 40px 40px;
+            border-bottom: 1px solid #d6cfc4;
+        }
+
+        .region-back {
+            font-size: 0.8rem;
+            color: #8a7f74;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .region-back:hover { color: #c0392b; }
+
+        .region-name {
+            font-family: serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .region-desc {
+            font-size: 0.95rem;
+            color: #8a7f74;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .section { padding: 40px; }
+
+        .section-header {
+            font-family: serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding-bottom: 14px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid #d6cfc4;
+        }
+
+        /* 여행지 */
+        .spot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: #d6cfc4;
+            border: 1px solid #d6cfc4;
+        }
+
+        .spot-card {
+            background: #fff;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .spot-img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            align-items: center;
+            justify-content: center;
+            color: #d6cfc4;
+            font-size: 0.75rem;
+            border-radius: 2px;
+        }
+
+        .spot-name {
+            font-family: serif;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .spot-desc {
+            font-size: 0.82rem;
+            color: #8a7f74;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* 음식 */
+        .food-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border: 1px solid #d6cfc4;
+            background: #d6cfc4;
+        }
+
+        .food-item {
+            background: #fff;
+            padding: 22px 28px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .food-num {
+            font-family: serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #d6cfc4;
+            width: 36px;
+            flex-shrink: 0;
+        }
+
+        .food-name {
+            font-family: serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .food-desc {
+            font-size: 0.8rem;
+            color: #8a7f74;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <div class="region-hero">
+        <a class="region-back" href="tmap1.html">← 지도로 돌아가기</a>
+        <h1 class="region-name">경상북도</h1>
+        <p class="region-desc">신라의 천년 역사와 푸른 동해, 전통문화가 살아 숨 쉬는 힐링과 감동의 여행지.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header">대표 여행지</div>
+        <div class="spot-grid">
+            <div class="spot-card">
+                <img src="불국사.webp" alt="불국사" class="spot-img">
+                <div class="spot-name">불국사</div>
+                <div class="spot-desc">불국정토를 속세에 건설하겠다는 야심찬 통일신라의 꿈을 드러내는 건축물로 국가유산이자 유네스코 세계유산.</div>
+            </div>
+            <div class="spot-card">
+                <img src="하회마을.jpg" alt="하회마을" class="spot-img">
+                <div class="spot-name">하회마을</div>
+                <div class="spot-desc">마을 전체가 국가민속문화유산이며 유네스코 세계유산으로 지정된 명소.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">추천 음식</div>
+        <div class="food-list">
+            <div class="food-item">
+                <span class="food-num">01</span>
+                <div>
+                    <div class="food-name">포항 과메기</div>
+                    <div class="food-desc">겨울철 청어잡이의 주산지이자 과메기를 만들기에 최적의 자연 해풍인 포항의 특산물</div>
+                </div>
+            </div>
+            <div class="food-item">
+                <span class="food-num">02</span>
+                <div>
+                    <div class="food-name">영덕 대게</div>
+                    <div class="food-desc">조선시대 특산물로 조정에 올리던 유서깊은 영덕의 대표 음식인 대게.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tpage.js"></script>
+</body>
+</html>
