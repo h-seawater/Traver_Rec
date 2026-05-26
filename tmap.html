@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전국 지도</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #ffffff;
+        }
+
+        #mapImg {
+            width: 1200px;
+            height: auto;
+            display: block;
+        }
+
+        area { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <img src="행정구역지도.jpg" alt="지도" usemap="#koreaMap" id="mapImg">
+    
+    <!--좌표 지정은 image-map.net에서 구함-->
+    <map name="koreaMap">
+    <area href="seoul.html" alt="서울" title="서울" coords="416,184,423,208,447,225,470,220,480,196,463,162" shape="poly">
+    <area href="#경기" target="" alt="경기도" title="경기도" coords="558,263,492,312,431,313,380,247,353,160,457,70,516,97,533,134,527,174,567,202" shape="poly">
+    <area href="#강원" target="" alt="강원도" title="강원도" coords="644,9,782,266,695,287,622,256,558,264,567,202,527,175,534,134,518,100,464,60,607,62" shape="poly">
+    <area href="#충북" target="" alt="충북" title="충북" coords="623,257,692,284,659,320,616,332,584,378,609,434,590,468,549,460,514,423,486,362,496,312,557,263" shape="poly">
+    <area href="#충남" target="" alt="충남" title="충남" coords="495,312,434,313,379,289,336,333,412,466,497,451,526,477,546,454,515,426,486,364" shape="poly">
+    <area href="#경북" target="" alt="경북" title="경북" coords="692,286,781,266,814,458,775,583,625,521,582,485,608,433,584,381,612,333,661,320" shape="poly">
+    <area href="#경남" target="" alt="경남" title="경남" coords="771,581,623,520,582,485,542,533,540,589,586,692,750,687" shape="poly">
+    <area href="#전북" target="" alt="전북" title="전북" coords="589,469,544,531,541,589,387,587,383,564,391,474,411,464,493,449,523,476,543,456" shape="poly">
+    <area href="#전남" target="" alt="전남" title="전남" coords="540,587,585,689,446,790,302,774,322,627,383,564,387,587" shape="poly">
+    <area href="#제주" target="" alt="제주" title="제주" coords="404,918,60" shape="circle">
+</map>
+
+
+</body>
+</html>
