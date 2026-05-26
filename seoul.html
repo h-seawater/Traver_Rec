@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경기도 여행지</title>
+    <link rel="stylesheet" href="tstyle.css"/>
+    <style>
+        .region-hero {
+            padding: 60px 40px 40px;
+            border-bottom: 1px solid #d6cfc4;
+        }
+
+        .region-back {
+            font-size: 0.8rem;
+            color: #8a7f74;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .region-back:hover { color: #c0392b; }
+
+        .region-name {
+            font-family: serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .region-desc {
+            font-size: 0.95rem;
+            color: #8a7f74;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .section { padding: 40px; }
+
+        .section-header {
+            font-family: serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding-bottom: 14px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid #d6cfc4;
+        }
+
+        /* 여행지 */
+        .spot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: #d6cfc4;
+            border: 1px solid #d6cfc4;
+        }
+
+        .spot-card {
+            background: #fff;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .spot-img {
+            width: 100%;
+            height: 160px;
+            background: #ece8e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d6cfc4;
+            font-size: 0.75rem;
+            border-radius: 2px;
+        }
+
+        .spot-name {
+            font-family: serif;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .spot-desc {
+            font-size: 0.82rem;
+            color: #8a7f74;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* 음식 */
+        .food-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border: 1px solid #d6cfc4;
+            background: #d6cfc4;
+        }
+
+        .food-item {
+            background: #fff;
+            padding: 22px 28px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .food-num {
+            font-family: serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #d6cfc4;
+            width: 36px;
+            flex-shrink: 0;
+        }
+
+        .food-name {
+            font-family: serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .food-desc {
+            font-size: 0.8rem;
+            color: #8a7f74;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">대한민국<br>여행지</div>
+        <div class="nav-tabs">
+            <div class="nav-item" id="drop-course">
+                <button class="nav-tab" onclick="toggleDropdown('drop-course')">
+                    <span class="nav-tab-title">여행지</span>
+                    <span class="nav-tab-sub">유명한 추천 여행지</span>
+                </button>
+                <div class="dropdown">
+                    <a class="dropdown-item" href="#">올레길</a>
+                    <a class="dropdown-item" href="#">경복궁</a>
+                    <a class="dropdown-item" href="#">기타 아무거산</a>
+                </div>
+            </div>
+            <div class="nav-item" id="drop-festival">
+                <button class="nav-tab" onclick="toggleDropdown('drop-festival')">
+                    <span class="nav-tab-title">축제</span>
+                    <span class="nav-tab-sub">현재 진행중인 축제</span>
+                </button>
+                <div class="dropdown">
+                    <a class="dropdown-item" href="#">자연-꽃 축제</a>
+                    <a class="dropdown-item" href="#">문화-전통 축제</a>
+                    <a class="dropdown-item" href="#">식도락 축제</a>
+                    <a class="dropdown-item" href="#">기타 아무거산</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="nav-tab" href="tmap1.html">
+                    <span class="nav-tab-title">지도</span>
+                    <span class="nav-tab-sub">전국 지도</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="region-hero">
+        <a class="region-back" href="tmap1.html">← 지도로 돌아가기</a>
+        <h1 class="region-name">경기도</h1>
+        <p class="region-desc">서울을 둘러싼 대한민국 최대의 도.<br>역사 유적부터 자연 경관까지 다양한 매력을 품고 있습니다.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header">대표 여행지</div>
+        <div class="spot-grid">
+            <div class="spot-card">
+                <div class="spot-img">이미지</div>
+                <div class="spot-name">수원 화성</div>
+                <div class="spot-desc">조선시대 정조가 축조한 성곽으로 유네스코 세계문화유산에 등재된 대표 유적지.</div>
+            </div>
+            <div class="spot-card">
+                <div class="spot-img">이미지</div>
+                <div class="spot-name">남한산성</div>
+                <div class="spot-desc">조선시대 산성으로 역사적 가치와 함께 트레킹 코스로도 유명한 곳.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">추천 음식</div>
+        <div class="food-list">
+            <div class="food-item">
+                <span class="food-num">01</span>
+                <div>
+                    <div class="food-name">수원 왕갈비</div>
+                    <div class="food-desc">수원의 대표 음식으로 큼직한 갈비가 특징. 행궁동 일대에 유명 맛집이 많아요.</div>
+                </div>
+            </div>
+            <div class="food-item">
+                <span class="food-num">02</span>
+                <div>
+                    <div class="food-name">가평 잣막걸리</div>
+                    <div class="food-desc">가평 특산물인 잣으로 만든 막걸리. 잣두부와 함께 즐기는 것이 별미.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="tpage.js"></script>
+</body>
+</html>
